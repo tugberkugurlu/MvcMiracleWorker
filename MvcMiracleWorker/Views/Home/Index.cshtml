@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MvcMiracleWorker.Models.Sample>
+
+@{
+    ViewBag.Title = "Sample List - MvcMiracleWorker by @tourismgeek";
+}
+
+<h2>Sample List</h2>
+
+<ul>
+    @foreach (var item in Model) {
+    <li>
+        <a  href="@Url.Action("Index", new { controller = "Sample", Area = item.Area })">@item.SampleName</a>
+        <div>
+            @item.Description
+        </div>
+    </li>
+    }
+</ul>

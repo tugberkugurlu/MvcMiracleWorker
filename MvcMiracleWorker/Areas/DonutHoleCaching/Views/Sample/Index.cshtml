@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Donut Hole Caching Sample";
+}
+
+<h2>Donut Hole Caching Sample</h2>
+
+<h3>Cached</h3>
+
+<div>
+    @Html.Action("sampleChildAction", new { controller = "Sample", Area = "DonutHoleCaching" })
+</div>
+
+<h3>Normal</h3>
+
+<div>
+    <p>
+        This portion of the web page was scripted on <strong>@DateTime.Now.ToString("dd.MM.yyy HH:mm.ss")</strong>
+    </p>
+</div>

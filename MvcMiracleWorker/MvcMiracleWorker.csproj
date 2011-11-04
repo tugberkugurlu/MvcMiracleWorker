@@ -63,8 +63,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="TugberkUg.MVC">
-      <HintPath>..\packages\TugberkUg.MVC.1.0.4325.20483\lib\net40\TugberkUg.MVC.dll</HintPath>
+    <Reference Include="TugberkUg.MVC, Version=1.0.4325.24008, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\TugberkUg.MVC.1.0.4325.24008\lib\net40\TugberkUg.MVC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +121,7 @@
     <Content Include="Scripts\jquery-1.5.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.tugberkug.validation.greaterthandate.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

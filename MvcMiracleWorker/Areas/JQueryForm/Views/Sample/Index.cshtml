@@ -1,0 +1,91 @@
+﻿@model MvcMiracleWorker.Areas.JQueryForm.Models.Reservation
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.form.js")" type="text/javascript"></script>
+
+<script>
+    (function () {
+        $(function () {
+
+            // bind form using ajaxForm 
+            $('Form').ajaxForm({
+                // dataType identifies the expected content type of the server response 
+                dataType: 'json',
+
+                // success identifies the function to invoke when the server response 
+                // has been received 
+                success: processJson,
+                beforeSubmit: showRequest
+            });
+
+            function processJson(data) {
+                // 'data' is the json object returned from the server 
+                alert(data.hotelName);
+            }
+
+            // pre-submit callback 
+            function showRequest(formData, jqForm, options) {
+                // formData is an array; here we use $.param to convert it to a string to display it 
+                // but the form plugin does this for you automatically when it submits the data 
+                var queryString = $.param(formData);
+
+                // jqForm is a jQuery object encapsulating the form element.  To access the 
+                // DOM element for the form do this: 
+                // var formElement = jqForm[0]; 
+
+                alert('About to submit: \n\n' + queryString);
+
+                // here we could return false to prevent the form from being submitted; 
+                // returning anything other than false will allow the form submit to continue 
+                return true;
+            } 
+
+        });
+    })();
+</script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Reservation</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HotelName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HotelName)
+            @Html.ValidationMessageFor(model => model.HotelName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CheckIn)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CheckIn)
+            @Html.ValidationMessageFor(model => model.CheckIn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CheckOut)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CheckOut)
+            @Html.ValidationMessageFor(model => model.CheckOut)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

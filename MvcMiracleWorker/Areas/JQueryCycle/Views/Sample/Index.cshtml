@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@section head { 
+    <style type="text/css">
+        #s7 { width: 230px; height: 230px; border: 1px solid #ddd; background-color: #eee; }
+        #s7 div { width: 200px; height: 200px; padding: 15px; color: #333; text-align: left; font-size: 16px; overflow: hidden }        #s7 div { top: 0; left: 0 }
+    </style>
+
+    <script src="@Url.Content("~/Scripts/jquery.cycle.all.js")" type="text/javascript"></script>
+    <script>
+        (function () {
+            $(function () {
+                $('#s7').cycle({
+                    fx: 'scrollRight',
+                    delay: -1000
+                });
+            });
+        })();
+    </script>
+}
+
+<h2>Cycle Plugin Sample</h2>
+
+<div id="s7">
+    <div>
+        1-) There are tons of options you can use to control how and when your slide transitions occur. Test them out and see what ones you like. Check out the many examples on this website and see which ones catch your eye.
+    </div>
+    <div>
+        2-) There are tons of options you can use to control how and when your slide transitions occur. Test them out and see what ones you like. Check out the many examples on this website and see which ones catch your eye.
+    </div>
+    <div>
+        3-) There are tons of options you can use to control how and when your slide transitions occur. Test them out and see what ones you like. Check out the many examples on this website and see which ones catch your eye.
+    </div>
+</div>

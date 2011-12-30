@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "HTML Select List Sample";
+}
+
+<h2>HTML Select List Sample</h2>
+
+<p>
+    <strong>Product Categories:</strong>
+</p>
+<p>
+    @Html.DropDownList(
+        "ProductCategoryId", 
+        (IEnumerable<SelectListItem>)ViewBag.ProductCategorySelectList
+    )
+</p>

@@ -37,6 +37,12 @@ namespace MvcMiracleWorker.Models {
                 Description = "Demo of a File Upload Scenario"
             });
 
+            model.Add(new Sample {
+                SampleName = "HTML Select Element",
+                Area = "SelectList",
+                Description = "Demo of Genereting a HTML Select Element"
+            });
+
             #endregion
 
             return model;

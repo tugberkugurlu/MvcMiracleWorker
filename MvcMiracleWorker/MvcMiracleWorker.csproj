@@ -93,6 +93,9 @@
     <Compile Include="Areas\JQueryForm\Controllers\SampleController.cs" />
     <Compile Include="Areas\JQueryForm\JQueryFormAreaRegistration.cs" />
     <Compile Include="Areas\JQueryForm\Models\Reservation.cs" />
+    <Compile Include="Areas\SelectList\Controllers\SampleController.cs" />
+    <Compile Include="Areas\SelectList\Models\ProductCategoryRepo.cs" />
+    <Compile Include="Areas\SelectList\SelectListAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,6 +174,7 @@
     <Folder Include="Areas\JQueryCycle\Models\" />
     <Folder Include="Areas\JQueryCycle\Views\Shared\" />
     <Folder Include="Areas\JQueryForm\Views\Shared\" />
+    <Folder Include="Areas\SelectList\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -237,6 +241,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\FileUpload\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\SelectList\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\SelectList\Views\Sample\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\SelectList\Views\_ViewStart.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "File Upload Sample";
+}
+<h2>File Upload Sample</h2>
+
+@if (TempData["Result"] != null) { 
+    <ul>
+        <li>@TempData["Result"]</li>
+    </ul>
+}
+
+@using (Html.BeginForm("index", "sample", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+ 
+    @Html.AntiForgeryToken()
+    
+    <input type="file" name="File" />
+    <p>
+        <input type="submit" value="Upload" />
+    </p>
+}

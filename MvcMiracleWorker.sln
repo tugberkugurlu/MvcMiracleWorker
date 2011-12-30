@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMiracleWorker", "MvcMiracleWorker\MvcMiracleWorker.csproj", "{F16756BB-A131-4593-AF54-2E3107DC4C7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMiracleWorker.Tests", "MvcMiracleWorker.Tests\MvcMiracleWorker.Tests.csproj", "{E72DBC15-9A47-49DF-B913-72D844C005E8}"
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E72DBC15-9A47-49DF-B913-72D844C005E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E72DBC15-9A47-49DF-B913-72D844C005E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E72DBC15-9A47-49DF-B913-72D844C005E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E72DBC15-9A47-49DF-B913-72D844C005E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16756BB-A131-4593-AF54-2E3107DC4C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

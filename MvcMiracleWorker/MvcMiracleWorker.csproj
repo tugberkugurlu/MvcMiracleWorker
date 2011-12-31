@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\CSRazorViewEngine.cs" />
+    <Compile Include="Application\TwoLevelViewCache.cs" />
     <Compile Include="Areas\DonutHoleCaching\Controllers\SampleController.cs" />
     <Compile Include="Areas\DonutHoleCaching\DonutHoleCachingAreaRegistration.cs" />
     <Compile Include="Areas\FileUpload\Controllers\SampleController.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Areas\SelectList\Controllers\SampleController.cs" />
     <Compile Include="Areas\SelectList\Models\ProductCategoryRepo.cs" />
     <Compile Include="Areas\SelectList\SelectListAreaRegistration.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -39,6 +39,8 @@ namespace MvcMiracleWorker.Application {
                 "~/Views/{1}/{0}.cshtml",
                 "~/Views/Shared/{0}.cshtml"
             };
+
+            base.ViewLocationCache = new TwoLevelViewCache(base.ViewLocationCache);
         }
 
     }

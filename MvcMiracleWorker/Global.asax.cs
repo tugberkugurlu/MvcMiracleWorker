@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using MvcMiracleWorker.Application;
 
 namespace MvcMiracleWorker
 {
@@ -29,12 +30,18 @@ namespace MvcMiracleWorker
 
         }
 
+        public static void RegisterViewEngines() {
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new CSRazorViewEngine());
+        }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            RegisterViewEngines();
         }
     }
 }

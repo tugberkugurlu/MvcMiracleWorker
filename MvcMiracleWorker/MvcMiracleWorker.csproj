@@ -49,6 +49,9 @@
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PerformanceMonitor">
+      <HintPath>..\lib\PerformanceMonitor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -79,6 +82,8 @@
   <ItemGroup>
     <Compile Include="Application\CSRazorViewEngine.cs" />
     <Compile Include="Application\TwoLevelViewCache.cs" />
+    <Compile Include="Areas\Async\AsyncAreaRegistration.cs" />
+    <Compile Include="Areas\Async\Controllers\SampleController.cs" />
     <Compile Include="Areas\DonutHoleCaching\Controllers\SampleController.cs" />
     <Compile Include="Areas\DonutHoleCaching\DonutHoleCachingAreaRegistration.cs" />
     <Compile Include="Areas\FileUpload\Controllers\SampleController.cs" />
@@ -167,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Async\Models\" />
+    <Folder Include="Areas\Async\Views\Shared\" />
     <Folder Include="Areas\DonutHoleCaching\Models\" />
     <Folder Include="Areas\DonutHoleCaching\Views\Shared\" />
     <Folder Include="Areas\FileUpload\Models\" />
@@ -252,6 +259,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\SelectList\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Async\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Async\Views\Sample\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Async\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Async\Views\Sample\Index2.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

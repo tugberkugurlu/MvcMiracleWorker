@@ -15,16 +15,19 @@
 
                 $("#indicator").hide();
 
-                $("#citylinks a").click(function (e) {
+                if (typeof history.pushState !== 'undefined') { 
 
-                    history.pushState({ path: this.href }, '', this.href);
-                    act(this.href);
-                    e.preventDefault();
-                });
+                    $("#citylinks a").click(function (e) {
 
-                w.onpopstate = function (event) {
-                    act(d.location);
-                };
+                        history.pushState({ path: this.href }, '', this.href);
+                        act(this.href);
+                        e.preventDefault();
+                    });
+
+                    w.onpopstate = function (event) {
+                        act(d.location);
+                    };
+                }
 
                 function act(location) {
 

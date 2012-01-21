@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+@*
+    Links:
+    https://developer.mozilla.org/en/DOM/window.onpopstate
+    https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history
+    https://github.com/remy/html5demos/blob/master/demos/history.html
+*@
+@section head { 
+    <script>
+        (function (d, w) {
+
+            $(function () {
+
+                $("#indicator").hide();
+
+                $("#citylinks a").click(function (e) {
+
+                    history.pushState({ path: this.href }, '', this.href);
+                    act(this.href);
+                    e.preventDefault();
+                });
+
+                w.onpopstate = function (event) {
+                    act(d.location);
+                };
+
+                function act(location) {
+
+                    $("#results").hide();
+                    $("#indicator").show();
+
+                    $.getJSON(location, function (data) {
+
+                        $("#results").html(data.result);
+                        $("#results").fadeIn();
+
+                        $("#indicator").hide();
+                    });
+                }
+
+            });
+
+        })(document, window);
+    </script>
+}
+
+<h2>Cities In Turkey</h2>
+
+@Html.Partial("_CityLinks")
+
+
+<div id="indicator">Loading...</div>
+<div id="results">
+    @Html.Partial("_CityInfo")
+</div>

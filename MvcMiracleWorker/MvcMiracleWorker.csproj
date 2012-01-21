@@ -87,6 +87,9 @@
     <Compile Include="Areas\Async\Controllers\SampleController.cs" />
     <Compile Include="Areas\DonutHoleCaching\Controllers\SampleController.cs" />
     <Compile Include="Areas\DonutHoleCaching\DonutHoleCachingAreaRegistration.cs" />
+    <Compile Include="Areas\DynamicValidation\Controllers\SampleController.cs" />
+    <Compile Include="Areas\DynamicValidation\DynamicValidationAreaRegistration.cs" />
+    <Compile Include="Areas\DynamicValidation\Models\UserModel.cs" />
     <Compile Include="Areas\FileUpload\Controllers\SampleController.cs" />
     <Compile Include="Areas\FileUpload\FileUploadAreaRegistration.cs" />
     <Compile Include="Areas\GreaterThanAttributeTugberkUgPackage\Controllers\SampleController.cs" />
@@ -209,6 +212,7 @@
     <Folder Include="Areas\Async\Views\Shared\" />
     <Folder Include="Areas\DonutHoleCaching\Models\" />
     <Folder Include="Areas\DonutHoleCaching\Views\Shared\" />
+    <Folder Include="Areas\DynamicValidation\Views\Shared\" />
     <Folder Include="Areas\FileUpload\Models\" />
     <Folder Include="Areas\FileUpload\Views\Shared\" />
     <Folder Include="Areas\GreaterThanAttributeTugberkUgPackage\Views\Shared\" />
@@ -321,6 +325,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HTML5HistoryAPI\Views\Sample\_CityInfo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DynamicValidation\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DynamicValidation\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DynamicValidation\Views\Sample\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DynamicValidation\Views\Sample\_UserDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DynamicValidation\Views\Sample\_UserCreate.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
